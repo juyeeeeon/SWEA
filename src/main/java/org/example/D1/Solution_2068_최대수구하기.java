@@ -1,18 +1,26 @@
 package org.example.D1;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Solution_2068_최대수구하기 {
-    public static void main(String args[]) throws Exception {
+    public static void main(String args[]) throws Exception
+    {
+
         Scanner sc = new Scanner(System.in);
+        int T;
+        T=sc.nextInt();
 
-
-        String input = sc.next();
-        int result = 0;
-        for (int i = 0; i < input.length(); i++) {
-            result += Integer.parseInt(input.substring(i, i + 1));
+        for(int test_case = 1; test_case <= T; test_case++)
+        {
+            int max = sc.nextInt();
+            for(int i=1; i<10; i++){
+                int tmp = sc.nextInt();
+                if(tmp>max){
+                    max = tmp;
+                }
+            }
+            System.out.println("#"+test_case+" "+max);
         }
-        System.out.println(result);
-
     }
 }

@@ -1,21 +1,32 @@
 package org.example.D1;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.Scanner;
-import java.util.StringTokenizer;
 
-public class Solution_2058_자릿수더하기 {
+public class Solution_1936_1대1가위바위보 {
     public static void main(String args[]) throws Exception {
         Scanner sc = new Scanner(System.in);
 
+        int A = sc.nextInt();
+        int B = sc.nextInt();
 
-        String input = sc.next();
-        int result = 0;
-        for (int i = 0; i < input.length(); i++) {
-            result += Integer.parseInt(input.substring(i, i + 1));
+        if(A == 1){
+            if(B == 2){
+                System.out.println("B");
+            }else if(B == 3){
+                System.out.println("A");
+            }
+        }else if(A == 2){
+            if(B==1){
+                System.out.println("A");
+            }else if(B==3){
+                System.out.println("A");
+            }
+        }else if(A==3){
+            if(B==1){
+                System.out.println("B");
+            }else if(B==2){
+                System.out.println("A");
+            }
         }
-        System.out.println(result);
-
     }
 }

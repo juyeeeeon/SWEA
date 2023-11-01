@@ -2,11 +2,19 @@ package org.example.D1;
 
 import java.util.Scanner;
 
-public class Solution_2047_신문헤드라인 {
+public class Solution_2046_스탬프찍기 {
     public static void main(String args[]) throws Exception {
         Scanner sc = new Scanner(System.in);
 
-        String input = sc.next();
-        System.out.println(input.toUpperCase());
+        int num = sc.nextInt();
+
+        //자바11이상
+//        System.out.println("#".repeat(num));
+
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < num; i++) {
+            builder.append("#");
+        }
+        System.out.println(builder);
     }
 }
