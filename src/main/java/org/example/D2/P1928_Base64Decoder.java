@@ -1,8 +1,8 @@
-package org.example.D1;
+package org.example.D2;
 
 import java.util.Scanner;
 
-public class Solution_2069_몫과나머지출력하기 {
+public class P1928_Base64Decoder {
     public static void main(String args[]) throws Exception
     {
 		/*
@@ -33,12 +33,21 @@ public class Solution_2069_몫과나머지출력하기 {
 			 */
             /////////////////////////////////////////////////////////////////////////////////////////////
             int N = sc.nextInt();
-            int M = sc.nextInt();
+            int[] arr = new int[N];
 
-            int result1 = N/M;
-            int result2 = N%M;
+            int sum = 0;
+            for(int i=0; i<N; i++){
+                arr[i] = sc.nextInt();
+                sum+= arr[i];
+            }
+            int avg = sum/N;
 
-            System.out.println("#"+test_case+" "+result1+" "+result2);
+            int count = 0;
+            for(int i=0; i<N; i++){
+                if(arr[i]<=avg) count++;
+            }
+
+            System.out.println("#"+test_case+" "+count);
         }
     }
 }

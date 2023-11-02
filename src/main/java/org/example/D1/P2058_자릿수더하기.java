@@ -2,18 +2,17 @@ package org.example.D1;
 
 import java.util.Scanner;
 
-public class Solution_2025_N줄덧셈 {
+public class P2058_자릿수더하기 {
     public static void main(String args[]) throws Exception {
         Scanner sc = new Scanner(System.in);
 
-        int N = sc.nextInt();
 
+        String input = sc.next();
         int result = 0;
-
-        for(int i=1; i<=N; i++){
-            result += i;
+        for (int i = 0; i < input.length(); i++) {
+            result += Integer.parseInt(input.substring(i, i + 1));
         }
-
         System.out.println(result);
+
     }
 }

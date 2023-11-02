@@ -2,7 +2,7 @@ package org.example.D3;
 
 import java.util.Scanner;
 
-public class Solution_12368_24시간 {
+public class P3431_준환이의운동관리 {
     public static void main(String args[]) throws Exception
     {
 		/*
@@ -32,15 +32,16 @@ public class Solution_12368_24시간 {
 				 이 부분에 여러분의 알고리즘 구현이 들어갑니다.
 			 */
             /////////////////////////////////////////////////////////////////////////////////////////////
-            int A = sc.nextInt();
-            int B = sc.nextInt();
+            int L = sc.nextInt();
+            int U = sc.nextInt();
+            int X = sc.nextInt();
 
-            int time = A+B;
-
-            if(time <24){
-                System.out.println("#"+test_case+" "+time);
+            if(X<L){
+                System.out.println("#"+test_case+" "+(L-X));
+            }else if(X>U){
+                System.out.println("#"+test_case+" "+(-1));
             }else{
-                System.out.println("#"+test_case+" "+(time-24));
+                System.out.println("#"+test_case+" "+0);
             }
         }
     }

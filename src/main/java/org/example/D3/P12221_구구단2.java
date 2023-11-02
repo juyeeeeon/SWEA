@@ -1,8 +1,12 @@
 package org.example.D3;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
 
-public class Solution_3431_준환이의운동관리 {
+public class P12221_구구단2 {
     public static void main(String args[]) throws Exception
     {
 		/*
@@ -17,9 +21,12 @@ public class Solution_3431_준환이의운동관리 {
 		/*
 		   표준입력 System.in 으로부터 스캐너를 만들어 데이터를 읽어옵니다.
 		 */
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st;
+
         int T;
-        T=sc.nextInt();
+        T=Integer.parseInt(br.readLine());
 		/*
 		   여러 개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
 		*/
@@ -32,17 +39,20 @@ public class Solution_3431_준환이의운동관리 {
 				 이 부분에 여러분의 알고리즘 구현이 들어갑니다.
 			 */
             /////////////////////////////////////////////////////////////////////////////////////////////
-            int L = sc.nextInt();
-            int U = sc.nextInt();
-            int X = sc.nextInt();
+            st = new StringTokenizer(br.readLine());
+            int num1 = Integer.parseInt(st.nextToken());
+            int num2 = Integer.parseInt(st.nextToken());
 
-            if(X<L){
-                System.out.println("#"+test_case+" "+(L-X));
-            }else if(X>U){
-                System.out.println("#"+test_case+" "+(-1));
+            if(num1 >9 || num2>9){
+                bw.write("#"+test_case+" "+-1+'\n');
             }else{
-                System.out.println("#"+test_case+" "+0);
+                bw.write("#"+test_case+" "+(num1*num2)+'\n');
             }
+
         }
+
+        bw.flush();
+        bw.close();
+        br.close();
     }
 }

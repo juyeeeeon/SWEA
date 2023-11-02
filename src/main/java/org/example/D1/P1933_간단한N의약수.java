@@ -2,7 +2,7 @@ package org.example.D1;
 
 import java.util.Scanner;
 
-public class Solution_1933_간단한N의약수 {
+public class P1933_간단한N의약수 {
     public static void main(String args[]) throws Exception
     {
         Scanner sc = new Scanner(System.in);

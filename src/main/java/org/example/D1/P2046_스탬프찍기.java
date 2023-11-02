@@ -2,7 +2,7 @@ package org.example.D1;
 
 import java.util.Scanner;
 
-public class Solution_2046_스탬프찍기 {
+public class P2046_스탬프찍기 {
     public static void main(String args[]) throws Exception {
         Scanner sc = new Scanner(System.in);
 

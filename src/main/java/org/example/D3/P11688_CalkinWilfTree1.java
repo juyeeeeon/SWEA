@@ -2,7 +2,7 @@ package org.example.D3;
 
 import java.util.Scanner;
 
-public class Solution_13218_조별과제 {
+public class P11688_CalkinWilfTree1 {
     public static void main(String args[]) throws Exception
     {
 		/*
@@ -26,14 +26,25 @@ public class Solution_13218_조별과제 {
 
         for(int test_case = 1; test_case <= T; test_case++)
         {
+            int[] result = {1, 1};
 
+            String str = sc.next();
+            for(int i=0; i<str.length(); i++){
+                char direc = str.charAt(i);
+                if(direc == 'L'){
+                    result[1] += result[0];
+                }else{
+                    result[0] +=result[1];
+                }
+            }
+
+            System.out.println("#"+test_case+" " + result[0] +" "+result[1]);
             /////////////////////////////////////////////////////////////////////////////////////////////
 			/*
 				 이 부분에 여러분의 알고리즘 구현이 들어갑니다.
 			 */
             /////////////////////////////////////////////////////////////////////////////////////////////
-            int N = sc.nextInt();
-            System.out.println("#"+test_case+" "+(N/3));
+
         }
     }
 }

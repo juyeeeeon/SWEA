@@ -1,8 +1,8 @@
-package org.example.D2;
+package org.example.D3;
 
 import java.util.Scanner;
 
-public class Solution_1945_간단한소인수분해 {
+public class P15941_평행사변형 {
     public static void main(String args[]) throws Exception
     {
 		/*
@@ -33,35 +33,7 @@ public class Solution_1945_간단한소인수분해 {
 			 */
             /////////////////////////////////////////////////////////////////////////////////////////////
             int N = sc.nextInt();
-            int two = 0;
-            int three = 0;
-            int five = 0;
-            int seven = 0;
-            int eleven = 0;
-
-            while(N%2 == 0){
-                N /= 2;
-                two++;
-            }
-            while(N%3 == 0){
-                N /= 3;
-                three++;
-            }
-            while(N%5 == 0){
-                N /= 5;
-                five++;
-            }
-            while(N%7 == 0){
-                N /= 7;
-                seven++;
-            }
-            while(N%11 == 0){
-                N /= 11;
-                eleven++;
-            }
-
-            System.out.println("#"+test_case+" "+two+" "+three+" "+five+" "+seven+" "+eleven);
-
+            System.out.println("#"+test_case+" "+(N*N));
         }
     }
 }

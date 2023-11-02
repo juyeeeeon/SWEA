@@ -1,9 +1,8 @@
 package org.example.D1;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class Solution_2068_최대수구하기 {
+public class P2068_최대수구하기 {
     public static void main(String args[]) throws Exception
     {
 
