@@ -2,6 +2,7 @@
 //모두 import하기
 import java.util.*;
 import java.io.*;
+import java.lang.*;
 ```
 
 ```java
@@ -39,6 +40,10 @@ System.out.println(buffer);
 ```java
 //int의 절댓값
 Math.abs();
+//max값
+Math.max( , );
+//min값
+Math.min( , );
 ```
 
 ```java
@@ -46,5 +51,42 @@ Math.abs();
 String strN = Integer.toString(N);
 ```
 
+```java
+//오름차순 정렬
+int A[] = {5 ,4, 3, 2, 1};
+Arrays.sort(A); //{1, 2, 3, 4, 5}
 
+//내림차순 정렬
+Integer A[] = {1, 2, 3, 4, 5};
+Arrays.sort(A, Collections.reverseOrder()); //{5, 4, 3, 2, 1}
+
+/**
+ * Arrays.sort()는 일시적인 sort가 아닌 array 배열 자체를 sort하므로 array가 변함!
+ * /
+```
+```java
+//max값 구하기
+Integer[] arr = new Integer[N];
+Integer max = Collections.max(Arrays.asList(arr));
+
+//min값 구하기
+Integer[] arr = new Integer[N];
+Integer max = Collections.min(Arrays.asList(arr));
+
+/**
+ * array 배열 자체를 sort하지 않고 그냥 max와 min값을 구하기 때문에 array가 변하지 않음!
+ * /
+```
+
+```java
+//Integer array는 default 값이 null이므로
+Integer[] arr = new Integer[N];
+//array를 0으로 초기화
+Arrays.fill(arr, 0);
+```
+
+```java
+//stack에서 bottom에서 부터 꺼낼려면
+while(!stk.isEmpty()) System.out.print(stk.remove(0));
+```
 
